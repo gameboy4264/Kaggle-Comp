@@ -1,5 +1,5 @@
 # Kaggle Competition 1 -- Housing Prices Document
-# Version 4.0 -- Pipeline
+# Version 5.0 -- Cross Validation
 
 # 0 导入常用库
 import pandas as pd
