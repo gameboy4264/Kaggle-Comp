@@ -72,25 +72,3 @@ for a in range(250):
 df.drop('infomation', axis=1, inplace=True)
 
 df.to_csv('movie.csv')
-
-
-
-
-
-
-
-
-
-
-
-'''
-	with codecs.open('movie', 'wb', encoding='utf-8') as fp:
-		while url:
-						fp.write(u'{movies}\n'.format(movies='\n'.join(movies)))
-
-def main():
-
-	print(df)
-
-if __name__ == '__main__':
-	main()
