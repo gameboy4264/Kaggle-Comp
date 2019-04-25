@@ -287,7 +287,10 @@ for model in model_list:
 
 
 
-
+model_BaggingRegressor.fit(xtrain, ytrain)
+pred = model_BaggingRegressor.predict(xtest)
+output = pd.DataFrame({'id': test2.id, 'revenue': pred})
+output.to_csv('submission.csv', index=False)
 
 
 """
@@ -298,10 +301,7 @@ val_preds[val_preds<0] = 0
 rmsle = np.sqrt(mean_squared_log_error( val_preds, val_y))
 print("RMSLE: %2f" %sqrt(rmsle))
 
-model_BaggingRegressor.fit(xtrain, ytrain)
-pred = model_BaggingRegressor.predict(xtest)
-output = pd.DataFrame({'id': test2.id, 'revenue': pred})
-output.to_csv('submission5.csv', index=False)
+
 """
 
 
